@@ -25,34 +25,48 @@ module.exports = {
         project: 'tsconfig.json'
     },
     rules: {
-        "@typescript-eslint/indent": [
-            "error",
+        '@typescript-eslint/indent': [
+            'error',
             4,
             {
-                "FunctionDeclaration": {
-                    "parameters": "first"
+                'FunctionDeclaration': {
+                    'parameters': 'first'
                 },
-                "FunctionExpression": {
-                    "parameters": "first"
+                'FunctionExpression': {
+                    'parameters': 'first'
                 }
             }
         ],
-        "@typescript-eslint/member-delimiter-style": [
-            "error",
+        '@typescript-eslint/member-delimiter-style': [
+            'error',
             {
-                "multiline": {
-                    "delimiter": "semi",
-                    "requireLast": true
+                'multiline': {
+                    'delimiter': 'semi',
+                    'requireLast': true
                 },
-                "singleline": {
-                    "delimiter": "semi",
-                    "requireLast": false
+                'singleline': {
+                    'delimiter': 'semi',
+                    'requireLast': false
                 }
             }
         ],
-        "@typescript-eslint/semi": [
-            "error",
-            "always"
+        '@typescript-eslint/semi': [
+            'error',
+            'always'
         ],
+        '@typescript-eslint/quotes': [
+            'error',
+            'single'
+        ],
+        '@typescript-eslint/no-unused-vars': 'warn',
+        '@typescript-eslint/space-before-function-paren': 'off',
+        '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/consistent-type-imports': 'off',
+        '@typescript-eslint/promise-function-async': 'off',
+        'no-multiple-empty-lines': ['error', { 'max': 2, 'maxEOF': 1 }],
+        '@typescript-eslint/prefer-readonly': 'off',
+        'padded-blocks': ['error', { 'blocks': 'never' }],
+        '@typescript-eslint/lines-between-class-members': 'off',
+        '@typescript-eslint/no-useless-constructor': 'off',
     }
 }
