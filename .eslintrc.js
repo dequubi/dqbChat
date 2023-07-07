@@ -63,6 +63,7 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/consistent-type-imports': 'off',
         '@typescript-eslint/promise-function-async': 'off',
+        '@typescript-eslint/no-extraneous-class': 'off',
         'no-multiple-empty-lines': ['error', { 'max': 2, 'maxEOF': 1 }],
         '@typescript-eslint/prefer-readonly': 'off',
         'padded-blocks': ['error', { 'blocks': 'never' }],

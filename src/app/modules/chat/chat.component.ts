@@ -1,18 +1,19 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { TmiService } from '@core/services/tmi.service';
+import { TmiService } from '@app/modules/chat/services/tmi.service';
 
 @Component({
     selector: 'app-chat',
     templateUrl: './chat.component.html',
     styleUrls: ['./chat.component.scss'],
+    providers: [TmiService],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChatComponent implements OnInit {
 
-    public newMessage$ = TmiService.newMessage$.asObservable();
-    public messageList$ = TmiService.messageList$.asObservable();
+    public newMessage$ = this.tmiService.newMessage$.asObservable();
+    public messageList$ = this.tmiService.messageList$.asObservable();
 
-    public messageList = TmiService.messageList;
+    public messageList = this.tmiService.messageList;
 
     constructor(private tmiService: TmiService) {
     }
