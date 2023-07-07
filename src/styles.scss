@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~normalize.css";
+
+* {
+    font-family: var(--font-family);
+}
+
+:root {
+    --font-family: 'Roboto', 'Arial', serif;
+
+    --color-accent: #6BFF7A;
+    --color-text: #fff;
+}

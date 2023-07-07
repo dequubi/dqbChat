@@ -1,5 +1,23 @@
-<div class="chat">
-    <div *ngFor="let message of messageList$ | async">
-        {{message.message}}
+<main>
+    <div class="chat">
+        <div class="chat__border">
+            <div class="chat__message-container">
+                <div class="chat__message"
+                     [style.margin-bottom]="'-' + msg.offsetHeight + 'px'"
+                     *ngFor="let message of messageList$ | async"
+                     #msg
+                >
+                    <div class="chat__message__author"
+                         [style.color]="message.userState.color"
+                    >
+                        {{ message.userState.username }}
+                    </div>
+                    <div class="chat__message__content">
+                        {{ message.message }}
+                    </div>
+                    <img class="chat__message__init-event" src (error)="test(msg)">
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</main>
