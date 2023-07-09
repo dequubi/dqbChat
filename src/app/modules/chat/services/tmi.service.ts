@@ -3,7 +3,9 @@ import { ChatUserstate } from 'tmi.js';
 import * as tmi from 'tmi.js';
 import { MessageModel } from '@core/models/message.model';
 import { environment } from '@env/environment';
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class TmiService {
 
     public client: tmi.Client | undefined;

@@ -69,5 +69,6 @@ module.exports = {
         'padded-blocks': ['error', { 'blocks': 'never' }],
         '@typescript-eslint/lines-between-class-members': 'off',
         '@typescript-eslint/no-useless-constructor': 'off',
+        '@typescript-eslint/strict-boolean-expressions': 'off'
     }
 }
