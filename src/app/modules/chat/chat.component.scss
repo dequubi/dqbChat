@@ -1,0 +1,81 @@
+main {
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+
+    //noinspection CssInvalidPropertyValue
+    .chat {
+        height: stretch;
+        padding: 10px;
+
+        &__border {
+            border: 1px solid var(--color-accent);
+            border-top: none;
+            box-sizing: border-box;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        &__message-container {
+            margin: 3px;
+            height: calc(100% - 6px);
+            box-sizing: border-box;
+            background-origin: content-box;
+            background-image: repeating-linear-gradient(45deg,
+                rgba(255, 255, 255, 0.1) 5px,
+                rgba(255, 255, 255, 0.1) 5px,
+                transparent 12px,
+                transparent 20px);
+
+            background-repeat: repeat-x;
+            background-size: 212px 100%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            overflow: hidden;
+            position: relative;
+            animation: slide 10s linear infinite;
+        }
+
+        &__message {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 4px;
+            color: var(--color-text);
+            border-radius: 2px;
+            position: absolute;
+            right: -5000px;
+            top: 5000px;
+            overflow: hidden;
+
+            &:first-child {
+                margin-top: auto;
+            }
+
+            &__author {
+                font-weight: bold;
+                font-size: 16px;
+                text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+            }
+
+            &__content {
+                font-weight: bolder;
+                font-size: 20px;
+                overflow-wrap: break-word;
+            }
+
+            &__init-event {
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes slide {
+    0% {
+        background-position: 0 100%
+    }
+    100% {
+        background-position: 212px 100%
+    }
+}

@@ -12,7 +12,7 @@ export class TmiService {
     public newMessage$: Subject<MessageModel> = new Subject<MessageModel>();
 
     private _messageList: MessageModel[] = [];
-    private readonly _messageLimit = 5;
+    private readonly _messageLimit = 20;
 
     constructor() {
         console.log('INIT', 'TmiService');
