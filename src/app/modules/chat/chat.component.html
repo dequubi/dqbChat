@@ -1,9 +1,8 @@
 <main>
     <div class="chat">
         <div class="chat__border">
-            <div class="chat__message-container">
+            <div class="chat__message-container" #container>
                 <div class="chat__message"
-                     [style.margin-bottom]="'-' + msg.offsetHeight + 'px'"
                      *ngFor="let message of messageList$ | async"
                      #msg
                 >
@@ -15,7 +14,7 @@
                     <div class="chat__message__content">
                         {{ message.message }}
                     </div>
-                    <img class="chat__message__init-event" src (error)="test(msg)">
+                    <img class="chat__message__init-event" src (error)="messageInit(msg)">
                 </div>
             </div>
         </div>
